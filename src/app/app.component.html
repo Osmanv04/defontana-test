@@ -1,0 +1,8 @@
+<div class="flex-container">
+  <app-pokemon-list (sendPokemon)="sendPokemon($event)" (sendListPokemon)="sendListPokemon($event)"></app-pokemon-list>
+  <app-pokemon-detail *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-detail>
+</div>
+<div class="flex-container">
+  <app-pokemon-resume *ngIf="pokemons.length > 0" [pokemons]="pokemons"></app-pokemon-resume>
+</div>
+

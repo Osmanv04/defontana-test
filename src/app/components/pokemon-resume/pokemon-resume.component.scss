@@ -1,0 +1,30 @@
+@media only screen and (min-width: 600px) {
+  .example-card {
+    max-width: 600px !important;
+    width: 600px !important;
+  }
+}
+
+
+
+@media only screen and (min-width: 425px) {
+  .example-card{
+    max-width: 400px !important;
+    width: 400px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .example-card{
+    max-width: 600px !important;
+    width: 600px !important;
+  }
+}
+
+
+
+// .example-card {
+//   max-width: 900px !important;
+//   width: 900px !important;
+// }
+

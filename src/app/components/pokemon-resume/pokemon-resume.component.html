@@ -1,0 +1,16 @@
+<div class="flex-item-3">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Resumen</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list *ngIf="pokemonsGroups" #abilities role="list">
+        <mat-list-item *ngFor="let group of pokemonsGroups">
+          <strong>{{group.letter}}:</strong>&nbsp;
+          <span>{{group.count}} pokemones</span>
+        </mat-list-item>
+        <hr>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
