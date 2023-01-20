@@ -7,9 +7,9 @@
       <mat-list *ngIf="pokemonsGroups" #abilities role="list">
         <mat-list-item *ngFor="let group of pokemonsGroups">
           <strong>{{group.letter}}:</strong>&nbsp;
-          <span>{{group.count}} pokemones</span>
+          <span>{{group.count}} pokemones</span><hr>
         </mat-list-item>
-        <hr>
+
       </mat-list>
     </mat-card-content>
   </mat-card>

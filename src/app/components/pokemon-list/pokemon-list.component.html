@@ -3,20 +3,24 @@
     <mat-card-header>
       <mat-card-title>Pokemones</mat-card-title>
     </mat-card-header>
+    <form>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Buscar...</mat-label>
         <input type="text"
                matInput
                (keyup)="applyFilterKey($event)"
-               [(ngModel)]="name"
-               [matAutocomplete]="auto">
+               [matAutocomplete]="auto"
+               [formControl]="myControl"
+               #input>
         <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let pokemon of pokemons"
-                    [value]="pokemon.name" (onSelectionChange)="applyFilter(pokemon.name)">
-            {{pokemon.name}}
+        <mat-option *ngFor="let pokemon of pokemonsFilters |async"
+                   [value]="pokemon" [ngModel]="pokemon"  [ngModelOptions]="{standalone: true}" ngDefaultControl >
+            {{pokemon}}
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
+
+    </form>
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -42,7 +46,7 @@
         <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
       </tr> -->
     </table>
-    <mat-paginator #paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons aria-label="Select page of users"></mat-paginator>
+    <mat-paginator #paginator [pageSizeOptions]="[10, 20,50, 100]" showFirstLastButtons aria-label="Select page of users"></mat-paginator>
 
   </mat-card>
 </div>

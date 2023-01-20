@@ -5,12 +5,14 @@
       <mat-card-subtitle></mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p>Habilidades</p>
+      <p><strong>Habilidades</strong></p>
       <mat-list #abilities role="list">
         <mat-list-item *ngFor="let ability of pokemon.abilities">
-          {{ability.ability.name | titlecase}}
+          {{ability.ability.name | titlecase}} <hr>
         </mat-list-item>
       </mat-list>
+      <br>
+      <p><strong>Altura: </strong>{{pokemon.height}} cm</p>
     </mat-card-content>
   </mat-card>
 </div>

@@ -17,7 +17,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { MatListModule } from '@angular/material/list';
 import { PokemonResumeComponent } from './components/pokemon-resume/pokemon-resume.component'
@@ -48,7 +48,8 @@ import { PokemonResumeComponent } from './components/pokemon-resume/pokemon-resu
     MatInputModule,
     FormsModule,
     MatSortModule,
-    MatListModule
+    MatListModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
